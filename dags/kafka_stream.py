@@ -4,8 +4,8 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 
 default_args = {
-    'owner': 'airscholar',
-    'start_date': datetime(2023, 9, 3, 10, 00)
+    'owner': 'subhranil',
+    'start_date': datetime(2025, 7, 16, 12, 0)
 }
 
 def get_data():
@@ -46,7 +46,7 @@ def stream_data():
     curr_time = time.time()
 
     while True:
-        if time.time() > curr_time + 60: #1 minute
+        if time.time() > curr_time + 60: 
             break
         try:
             res = get_data()
